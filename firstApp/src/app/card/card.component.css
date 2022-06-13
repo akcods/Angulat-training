@@ -1,0 +1,17 @@
+.cardDiv{
+    margin: auto;
+    background-color: rgb(206, 217, 223);
+    color: darkblue;
+    padding: 10px;
+    margin: 10px;
+    width: 800px;
+    box-shadow: 5px 5px 5px solid gray;
+}
+h3{
+    font-family: arial;
+}
+p{
+    color: rgb(56, 48, 48);
+    font: courier;
+    font-size: 14px;
+}

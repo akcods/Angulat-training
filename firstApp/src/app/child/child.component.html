@@ -1,0 +1,17 @@
+<ng-content select=".app"></ng-content>
+<div class="box" [style.backgroundColor]="bColor">
+    <h1 [ngStyle]="styleit">{{title}}</h1>
+    <ul>
+        <li *ngFor="let x of colors" (click)="process(x)" [style.color]="x">{{x}}</li>
+    </ul>
+    <span>Change background</span>
+    <input type="color" [(ngModel)]="bColor">
+</div>
+<p [ngClass]="classStyle">
+    <button type="button" (click)="btn()">Toggle Flat</button>
+</p>
+<input type="text" [(ngModel)]="msg">
+<hr>
+<h5>{{msg | uppercase}}</h5>
+<ng-content select=".app1"></ng-content>
+

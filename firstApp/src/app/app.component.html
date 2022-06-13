@@ -1,0 +1,49 @@
+<div [style.backgroundColor]="bodyColor">
+  <input type="color" [(ngModel)]="bodyColor">
+  <h1>Hello world</h1>
+  <h2>{{title}}</h2>
+  <h3 [style]="styleObj">{{message}}</h3>
+  <h3 [style]="styleObj">{{series.film}} is releasing this month</h3>
+  <h4>Team members</h4>
+  <ul>
+    <li *ngFor="let team of teams">{{team}}</li>
+  </ul>
+  <hr>
+  <div>
+    <h3>CSS properties</h3>
+    <table>
+       <thead>
+            <th>property</th>
+            <th>value</th>
+       </thead>
+       <tbody>
+          <tr>
+            <td>Font family</td>
+            <td><select [(ngModel)]="fontFamily">
+                        <option *ngFor="let x of fonts">{{x}}</option>
+                </select>
+            </td>
+          </tr> 
+          <tr>
+             <td>Background Color</td>
+             <td><input type="color" [(ngModel)]="backgroundColor"></td>
+           </tr>
+           <tr>
+             <td>Color</td>
+             <td><input type="color" [(ngModel)]="color"></td>
+           </tr>
+       </tbody>
+    </table>
+ </div>
+  <app-child [fFamily]="fontFamily" [bgColor]="backgroundColor" [tColor]="color">
+    <h1 class="app">Hello Akash</h1>
+    <h2 class="app1">Content created using ng-content</h2>
+  </app-child>
+</div>
+<hr>
+<app-child2></app-child2>
+<hr>
+<h2>Card-Component</h2>
+<app-card *ngFor="let info of information" [title]="info.title" [description]="info.description" (receive)="receiveFromChild($event)">
+
+</app-card>
