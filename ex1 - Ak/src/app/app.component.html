@@ -1,0 +1,16 @@
+<h1>Exercise 1</h1>
+<!-- <app-table></app-table> -->
+<!-- <app-table2></app-table2> -->
+<div style="padding: 2%;">
+    <h2>Filter:</h2>
+    <label>Year</label>
+    <select [(ngModel)]="selectedYear">
+        <option *ngFor="let year of years ">{{year}}</option>
+    </select>
+    <label>Category</label>
+    <select [(ngModel)]="selectedCategory">
+        <option *ngFor="let category of categories">{{category}}</option>
+    </select>
+</div>
+<app-table3 [list]="noblePrizes | filter: selectedYear : selectedCategory"></app-table3>
+<!-- <app-table4></app-table4> -->
