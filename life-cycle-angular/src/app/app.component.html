@@ -1,0 +1,10 @@
+Parent Component
+
+<app-child [data]="x" #one></app-child>
+<app-child [data]="y" #two></app-child>
+
+<button (click)="toggle()">Toggle</button>
+
+<h5>{{one.data}}</h5>
+<h5>{{two.data}}</h5>
+<h1>{{one.year}}</h1>
