@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "name": "Grapes",
+      "description": "grapes are good for health",
+      "price": "10",
+      "qty": "1",
+      "type": "Fruits",
+      "imagename": "../../../webServer/nginx-1.21.6/html/uwkiftyz.jpg",
+      "id": 1
+    },
+    {
+      "name": "Mango",
+      "description": "Mangoes are good for health",
+      "price": "100",
+      "qty": "1",
+      "type": "Fruits",
+      "imagename": "../../../webServer/nginx-1.21.6/html/ixoezftr.jpg",
+      "id": 2
+    }
+  ]
+}
