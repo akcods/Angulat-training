@@ -1,0 +1,13 @@
+<h3>About us</h3>
+<p>We specialize in doing projects on various domains. We have a revenue of 
+     {{revenue | currency:"INR"}} million
+</p>
+<hr/>
+<app-slideshow></app-slideshow>
+<h5>Filter Feedbacks based on type
+<!-- <h1 style="padding: 10px; margin-left: 10px;"> Feedback</h1> -->
+<select style="padding: 10px; margin-left: 20px;" [(ngModel)]="now" >
+    <option *ngFor="let x of types">{{x}}</option>
+</select>
+<app-feedback *ngFor="let x of feedback | feedfilter:now" [fb]="x"></app-feedback>
+<app-feedback-box></app-feedback-box>
